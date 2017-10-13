@@ -1,9 +1,6 @@
 package com.jsonqiu.recyviewtype;
 
-/**
- * https://github.com/CymChad/BaseRecyclerViewAdapterHelper
- */
-public class Status {
+public class BeanChild {
     private boolean isRetweet;
     private String text;
     private String userName;
@@ -52,7 +49,7 @@ public class Status {
 
     @Override
     public String toString() {
-        return "Status{" +
+        return "BeanChild{" +
                 "isRetweet=" + isRetweet +
                 ", text='" + text + '\'' +
                 ", userName='" + userName + '\'' +

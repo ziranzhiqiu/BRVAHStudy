@@ -2,17 +2,14 @@ package com.jsonqiu.recyviewtype;
 
 import com.chad.library.adapter.base.entity.SectionEntity;
 
-/**
- * https://github.com/CymChad/BaseRecyclerViewAdapterHelper
- */
-public class MySection extends SectionEntity<Video> {
+public class MySection extends SectionEntity<BeanFather> {
     private boolean isMore;
     public MySection(boolean isHeader, String header, boolean isMroe) {
         super(isHeader, header);
         this.isMore = isMroe;
     }
 
-    public MySection(Video t) {
+    public MySection(BeanFather t) {
         super(t);
     }
 

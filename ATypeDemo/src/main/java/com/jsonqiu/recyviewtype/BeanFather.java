@@ -3,11 +3,11 @@ package com.jsonqiu.recyviewtype;
 /**
  * https://github.com/CymChad/BaseRecyclerViewAdapterHelper
  */
-public class Video {
+public class BeanFather {
     private String img;
     private String name;
 
-    public Video(String img, String name) {
+    public BeanFather(String img, String name) {
         this.img = img;
         this.name = name;
     }

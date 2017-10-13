@@ -20,6 +20,10 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        //实现全屏
+        //getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,  WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
         setContentView(R.layout.activity_main);
 
         mRecyclerView = (RecyclerView) findViewById(R.id.rv_list);
@@ -36,15 +40,15 @@ public class MainActivity extends AppCompatActivity {
 
                 MySection mySection = mData.get(position);
                 if (mySection.isHeader)
-                    Toast.makeText(MainActivity.this, mySection.header, Toast.LENGTH_LONG).show();
+                    Toast.makeText(MainActivity.this, " 标题栏 = "+mySection.header, Toast.LENGTH_SHORT).show();
                 else
-                    Toast.makeText(MainActivity.this, mySection.t.getName(), Toast.LENGTH_LONG).show();
+                    Toast.makeText(MainActivity.this, " 不是头部 = "+mySection.t.getName(), Toast.LENGTH_SHORT).show();
             }
         });
         sectionAdapter.setOnItemChildClickListener(new BaseQuickAdapter.OnItemChildClickListener() {
             @Override
             public void onItemChildClick(BaseQuickAdapter adapter, View view, int position) {
-                Toast.makeText(MainActivity.this, "onItemChildClick" + position, Toast.LENGTH_LONG).show();
+                Toast.makeText(MainActivity.this, " 点击 = " + position, Toast.LENGTH_SHORT).show();
             }
         });
         mRecyclerView.setAdapter(sectionAdapter);

@@ -5,9 +5,6 @@ package com.jsonqiu.recyviewtype;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * https://github.com/CymChad/BaseRecyclerViewAdapterHelper
- */
 public class DataServer {
 
     private static final String HTTPS_AVATARS1_GITHUBUSERCONTENT_COM_LINK = "https://avatars1.githubusercontent.com/u/7698209?v=3&s=460";
@@ -16,10 +13,10 @@ public class DataServer {
     private DataServer() {
     }
 
-    public static List<Status> getSampleData(int lenth) {
-        List<Status> list = new ArrayList<>();
+    public static List<BeanChild> getSampleData(int lenth) {
+        List<BeanChild> list = new ArrayList<>();
         for (int i = 0; i < lenth; i++) {
-            Status status = new Status();
+            BeanChild status = new BeanChild();
             status.setUserName("ZiRanZhiQiu" + i);
             status.setCreatedAt("04/05/" + i);
             status.setRetweet(i % 2 == 0);
@@ -30,9 +27,9 @@ public class DataServer {
         return list;
     }
 
-    public static List<Status> addData(List list, int dataSize) {
+    public static List<BeanChild> addData(List list, int dataSize) {
         for (int i = 0; i < dataSize; i++) {
-            Status status = new Status();
+            BeanChild status = new BeanChild();
             status.setUserName("JsonQiu" + i);
             status.setCreatedAt("04/05/" + i);
             status.setRetweet(i % 2 == 0);
@@ -46,49 +43,43 @@ public class DataServer {
 
     public static List<MySection> getSampleData() {
         List<MySection> list = new ArrayList<>();
-        list.add(new MySection(true, "Section 1", true));
-        list.add(new MySection(new Video(HTTPS_AVATARS1_GITHUBUSERCONTENT_COM_LINK, CYM_CHAD)));
-        list.add(new MySection(new Video(HTTPS_AVATARS1_GITHUBUSERCONTENT_COM_LINK, CYM_CHAD)));
-        list.add(new MySection(new Video(HTTPS_AVATARS1_GITHUBUSERCONTENT_COM_LINK, CYM_CHAD)));
-        list.add(new MySection(new Video(HTTPS_AVATARS1_GITHUBUSERCONTENT_COM_LINK, CYM_CHAD)));
+        list.add(new MySection(true, "标题 1", true));
+        list.add(new MySection(new BeanFather(HTTPS_AVATARS1_GITHUBUSERCONTENT_COM_LINK, CYM_CHAD)));
         list.add(new MySection(true, "Section 2", false));
-        list.add(new MySection(new Video(HTTPS_AVATARS1_GITHUBUSERCONTENT_COM_LINK, CYM_CHAD)));
-        list.add(new MySection(new Video(HTTPS_AVATARS1_GITHUBUSERCONTENT_COM_LINK, CYM_CHAD)));
-        list.add(new MySection(new Video(HTTPS_AVATARS1_GITHUBUSERCONTENT_COM_LINK, CYM_CHAD)));
-        list.add(new MySection(true, "Section 3", false));
-        list.add(new MySection(new Video(HTTPS_AVATARS1_GITHUBUSERCONTENT_COM_LINK, CYM_CHAD)));
-        list.add(new MySection(new Video(HTTPS_AVATARS1_GITHUBUSERCONTENT_COM_LINK, CYM_CHAD)));
+        list.add(new MySection(new BeanFather(HTTPS_AVATARS1_GITHUBUSERCONTENT_COM_LINK, CYM_CHAD)));
+        list.add(new MySection(new BeanFather(HTTPS_AVATARS1_GITHUBUSERCONTENT_COM_LINK, CYM_CHAD)));
+        list.add(new MySection(new BeanFather(HTTPS_AVATARS1_GITHUBUSERCONTENT_COM_LINK, CYM_CHAD)));
+        list.add(new MySection(true, "标题 3", true));
+        list.add(new MySection(new BeanFather(HTTPS_AVATARS1_GITHUBUSERCONTENT_COM_LINK, CYM_CHAD)));
+        list.add(new MySection(new BeanFather(HTTPS_AVATARS1_GITHUBUSERCONTENT_COM_LINK, CYM_CHAD)));
         list.add(new MySection(true, "Section 4", false));
-        list.add(new MySection(new Video(HTTPS_AVATARS1_GITHUBUSERCONTENT_COM_LINK, CYM_CHAD)));
-        list.add(new MySection(new Video(HTTPS_AVATARS1_GITHUBUSERCONTENT_COM_LINK, CYM_CHAD)));
-        list.add(new MySection(true, "Section 5", false));
-        list.add(new MySection(new Video(HTTPS_AVATARS1_GITHUBUSERCONTENT_COM_LINK, CYM_CHAD)));
-        list.add(new MySection(new Video(HTTPS_AVATARS1_GITHUBUSERCONTENT_COM_LINK, CYM_CHAD)));
-        list.add(new MySection(true, "Section 6", false));
-        list.add(new MySection(new Video(HTTPS_AVATARS1_GITHUBUSERCONTENT_COM_LINK, "JsonQIu")));
-        list.add(new MySection(new Video(HTTPS_AVATARS1_GITHUBUSERCONTENT_COM_LINK, "JsonQIu")));
-        list.add(new MySection(new Video(HTTPS_AVATARS1_GITHUBUSERCONTENT_COM_LINK, "JsonQIu")));
-        list.add(new MySection(new Video(HTTPS_AVATARS1_GITHUBUSERCONTENT_COM_LINK, "JsonQIu")));
-        list.add(new MySection(new Video(HTTPS_AVATARS1_GITHUBUSERCONTENT_COM_LINK, "JsonQIu")));
-        list.add(new MySection(new Video(HTTPS_AVATARS1_GITHUBUSERCONTENT_COM_LINK, "JsonQIu")));
-        list.add(new MySection(new Video(HTTPS_AVATARS1_GITHUBUSERCONTENT_COM_LINK, "JsonQIu")));
-        list.add(new MySection(new Video(HTTPS_AVATARS1_GITHUBUSERCONTENT_COM_LINK, "JsonQIu")));
-        list.add(new MySection(new Video(HTTPS_AVATARS1_GITHUBUSERCONTENT_COM_LINK, "JsonQIu")));
-        list.add(new MySection(new Video(HTTPS_AVATARS1_GITHUBUSERCONTENT_COM_LINK, "JsonQIu")));
-        list.add(new MySection(true, "Section 7", false));
-        list.add(new MySection(new Video(HTTPS_AVATARS1_GITHUBUSERCONTENT_COM_LINK, "JsonQIu")));
-        list.add(new MySection(new Video(HTTPS_AVATARS1_GITHUBUSERCONTENT_COM_LINK, "JsonQIu")));
-        list.add(new MySection(new Video(HTTPS_AVATARS1_GITHUBUSERCONTENT_COM_LINK, "JsonQIu")));
-        list.add(new MySection(new Video(HTTPS_AVATARS1_GITHUBUSERCONTENT_COM_LINK, "JsonQIu")));
-        list.add(new MySection(new Video(HTTPS_AVATARS1_GITHUBUSERCONTENT_COM_LINK, "JsonQIu")));
-        list.add(new MySection(new Video(HTTPS_AVATARS1_GITHUBUSERCONTENT_COM_LINK, "JsonQIu")));
-        list.add(new MySection(true, "Section 7", false));
-        list.add(new MySection(new Video(HTTPS_AVATARS1_GITHUBUSERCONTENT_COM_LINK, "888JsonQIu888")));
-        list.add(new MySection(new Video(HTTPS_AVATARS1_GITHUBUSERCONTENT_COM_LINK, "888JsonQIu888")));
-        list.add(new MySection(new Video(HTTPS_AVATARS1_GITHUBUSERCONTENT_COM_LINK, "888JsonQIu888")));
-        list.add(new MySection(new Video(HTTPS_AVATARS1_GITHUBUSERCONTENT_COM_LINK, "888JsonQIu888")));
-        list.add(new MySection(new Video(HTTPS_AVATARS1_GITHUBUSERCONTENT_COM_LINK, "888JsonQIu888")));
-        list.add(new MySection(new Video(HTTPS_AVATARS1_GITHUBUSERCONTENT_COM_LINK, "888JsonQIu888")));
+        list.add(new MySection(new BeanFather(HTTPS_AVATARS1_GITHUBUSERCONTENT_COM_LINK, CYM_CHAD)));
+        list.add(new MySection(new BeanFather(HTTPS_AVATARS1_GITHUBUSERCONTENT_COM_LINK, CYM_CHAD)));
+        list.add(new MySection(true, "标题 5", false));
+        list.add(new MySection(new BeanFather(HTTPS_AVATARS1_GITHUBUSERCONTENT_COM_LINK, CYM_CHAD)));
+        list.add(new MySection(true, "Section 6", true));
+        list.add(new MySection(new BeanFather(HTTPS_AVATARS1_GITHUBUSERCONTENT_COM_LINK, "JsonQIu")));
+        list.add(new MySection(new BeanFather(HTTPS_AVATARS1_GITHUBUSERCONTENT_COM_LINK, "JsonQIu")));
+        list.add(new MySection(new BeanFather(HTTPS_AVATARS1_GITHUBUSERCONTENT_COM_LINK, "JsonQIu")));
+        list.add(new MySection(true, "标题 7", false));
+        list.add(new MySection(new BeanFather(HTTPS_AVATARS1_GITHUBUSERCONTENT_COM_LINK, "JsonQIu")));
+        list.add(new MySection(new BeanFather(HTTPS_AVATARS1_GITHUBUSERCONTENT_COM_LINK, "JsonQIu")));
+        list.add(new MySection(new BeanFather(HTTPS_AVATARS1_GITHUBUSERCONTENT_COM_LINK, "JsonQIu")));
+        list.add(new MySection(true, "Section 8", true));
+        list.add(new MySection(new BeanFather(HTTPS_AVATARS1_GITHUBUSERCONTENT_COM_LINK, "888JsonQIu888")));
+        list.add(new MySection(new BeanFather(HTTPS_AVATARS1_GITHUBUSERCONTENT_COM_LINK, "888JsonQIu888")));
+        list.add(new MySection(new BeanFather(HTTPS_AVATARS1_GITHUBUSERCONTENT_COM_LINK, "888JsonQIu888")));
+        list.add(new MySection(new BeanFather(HTTPS_AVATARS1_GITHUBUSERCONTENT_COM_LINK, "888JsonQIu888")));
+        list.add(new MySection(new BeanFather(HTTPS_AVATARS1_GITHUBUSERCONTENT_COM_LINK, "888JsonQIu888")));
+        list.add(new MySection(new BeanFather(HTTPS_AVATARS1_GITHUBUSERCONTENT_COM_LINK, "888JsonQIu888")));
+        list.add(new MySection(new BeanFather(HTTPS_AVATARS1_GITHUBUSERCONTENT_COM_LINK, "888JsonQIu888")));
+        list.add(new MySection(new BeanFather(HTTPS_AVATARS1_GITHUBUSERCONTENT_COM_LINK, "888JsonQIu888")));
+        list.add(new MySection(new BeanFather(HTTPS_AVATARS1_GITHUBUSERCONTENT_COM_LINK, "888JsonQIu888")));
+        list.add(new MySection(new BeanFather(HTTPS_AVATARS1_GITHUBUSERCONTENT_COM_LINK, "888JsonQIu888")));
+        list.add(new MySection(new BeanFather(HTTPS_AVATARS1_GITHUBUSERCONTENT_COM_LINK, "888JsonQIu888")));
+        list.add(new MySection(new BeanFather(HTTPS_AVATARS1_GITHUBUSERCONTENT_COM_LINK, "888JsonQIu888")));
+        list.add(new MySection(new BeanFather(HTTPS_AVATARS1_GITHUBUSERCONTENT_COM_LINK, "888JsonQIu888")));
+        list.add(new MySection(new BeanFather(HTTPS_AVATARS1_GITHUBUSERCONTENT_COM_LINK, "888JsonQIu888")));
         return list;
     }
 

@@ -2,9 +2,6 @@ package com.jsonqiu.recyviewtype;
 
 import com.chad.library.adapter.base.entity.MultiItemEntity;
 
-/**
- * https://github.com/CymChad/BaseRecyclerViewAdapterHelper
- */
 public class MultipleItem implements MultiItemEntity {
     public static final int TEXT = 1;
     public static final int IMG = 2;
