@@ -1,0 +1,1 @@
+借鉴大神的数据 JavaBean，自己写的 MultipleItem
